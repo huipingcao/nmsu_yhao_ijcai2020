@@ -1,0 +1,554 @@
+INFO 2019-12-29 16:42:40,880 [88] cnn_classification_main: 
+log file: ../log/lstmfcn_ges/fcn_classification/lstmfcn_ges_train_0_fcn_classification_act3_acc_attention0.log
+INFO 2019-12-29 16:42:40,880 [89] cnn_classification_main: train_0.txt
+INFO 2019-12-29 16:42:40,881 [90] cnn_classification_main: cnn setting:
+ conv kernel list: 
+[[8 1]
+ [5 1]
+ [3 1]]
+pool rate list: 
+[[-1 -1]
+ [-1 -1]
+ [-1 -1]]
+feature map num list: 
+[128 256 128]
+batch size: 128
+max iteration: 400
+stop threshold: 1.0
+activation function: RELU
+initial std value: 0.02
+cnn same size or not: False
+feature method: none
+eval method: acc
+save obj folder: ../object/lstmfcn_ges/fcn_classification/cnn_obj_folder/
+temp obj folder: ../object/lstmfcn_ges/fcn_classification/cnn_model_folder/
+keep prob: 0.5
+INFO 2019-12-29 16:42:40,881 [91] cnn_classification_main: method: cnn
+INFO 2019-12-29 16:42:40,881 [92] cnn_classification_main: ============
+INFO 2019-12-29 16:42:40,881 [95] cnn_classification_main: train matrix shape: (198, 214, 18, 1)
+INFO 2019-12-29 16:42:40,881 [96] cnn_classification_main: train label shape: (198,)
+INFO 2019-12-29 16:42:40,881 [98] cnn_classification_main: [[2.03049504 1.39548525]
+ [2.02157583 1.52710907]
+ [1.99372876 1.55496217]]
+INFO 2019-12-29 16:42:40,882 [265] cnn_train_main: <tensor_model.model_setting.cnn_parameters object at 0x7f0f42447ef0>
+INFO 2019-12-29 16:42:40,886 [535] conv_configure: layer: 0 input:
+INFO 2019-12-29 16:42:40,886 [536] conv_configure: (?, 214, 18, 1)
+INFO 2019-12-29 16:42:40,934 [286] conf_act: act: 3
+INFO 2019-12-29 16:42:40,934 [303] conf_act: act3: 3
+INFO 2019-12-29 16:42:40,935 [555] conv_configure: Conv output: (?, 207, 18, 128)
+INFO 2019-12-29 16:42:40,935 [535] conv_configure: layer: 1 input:
+INFO 2019-12-29 16:42:40,935 [536] conv_configure: (?, 207, 18, 128)
+INFO 2019-12-29 16:42:40,973 [286] conf_act: act: 3
+INFO 2019-12-29 16:42:40,973 [303] conf_act: act3: 3
+INFO 2019-12-29 16:42:40,974 [555] conv_configure: Conv output: (?, 203, 18, 256)
+INFO 2019-12-29 16:42:40,974 [535] conv_configure: layer: 2 input:
+INFO 2019-12-29 16:42:40,974 [536] conv_configure: (?, 203, 18, 256)
+INFO 2019-12-29 16:42:41,013 [286] conf_act: act: 3
+INFO 2019-12-29 16:42:41,013 [303] conf_act: act3: 3
+INFO 2019-12-29 16:42:41,014 [555] conv_configure: Conv output: (?, 201, 18, 128)
+INFO 2019-12-29 16:42:41,014 [597] conv_configure: Conv output(?, 201, 18, 128)
+INFO 2019-12-29 16:42:41,014 [602] conv_configure: Conv shuffle output(?, 201, 18, 128)
+INFO 2019-12-29 16:42:41,014 [604] conv_configure: Attention applied
+INFO 2019-12-29 16:42:41,281 [609] conv_configure: Attention output(?, 201, 18, 128)
+INFO 2019-12-29 16:42:41,295 [624] out_configure: full conn weight shape
+INFO 2019-12-29 16:42:41,295 [625] out_configure: (2304, 400)
+INFO 2019-12-29 16:42:41,299 [630] out_configure: last full connect layer output:
+INFO 2019-12-29 16:42:41,300 [631] out_configure: (?, 400)
+INFO 2019-12-29 16:42:47,244 [79] cnn_train_init: learning rate: 0.0004
+INFO 2019-12-29 16:42:47,615 [92] cnn_training: cnn setting inside cnn_training
+INFO 2019-12-29 16:42:47,616 [93] cnn_training: conv kernel list: 
+[[8 1]
+ [5 1]
+ [3 1]]
+pool rate list: 
+[[-1 -1]
+ [-1 -1]
+ [-1 -1]]
+feature map num list: 
+[128 256 128]
+batch size: 128
+max iteration: 400
+stop threshold: 1.0
+activation function: RELU
+initial std value: 0.02
+cnn same size or not: False
+feature method: none
+eval method: acc
+save obj folder: ../object/lstmfcn_ges/fcn_classification/cnn_obj_folder/
+temp obj folder: ../object/lstmfcn_ges/fcn_classification/cnn_model_folder/
+keep prob: 0.5
+INFO 2019-12-29 16:42:47,706 [136] cnn_training: Random Epoch: 0[ 18 168  63 175  71]
+INFO 2019-12-29 16:42:47,707 [165] cnn_training: Batch controlled
+INFO 2019-12-29 16:42:47,707 [385] batch_control: class index before: 
+INFO 2019-12-29 16:42:47,707 [386] batch_control: {0: array([  2,  16,  21,  34,  36,  46,  47,  50,  55,  56,  71,  85, 105,
+       109, 116, 117, 121, 124]), 1: array([  0,   1,  10,  17,  18,  19,  23,  27,  28,  32,  42,  53,  59,
+        64,  65,  69,  70,  74,  76,  77,  78,  82,  84,  87,  91,  93,
+        94,  95,  97,  98,  99, 102, 106, 108, 115, 118, 123, 127]), 2: array([  4,   6,   8,  11,  20,  37,  44,  48,  52,  61,  68,  72,  73,
+        75,  80,  86,  89,  92, 101, 110, 112, 114, 126]), 3: array([  3,   7,  14,  15,  30,  31,  35,  45,  49,  57,  63,  79,  81,
+        90, 107, 113, 119, 120, 122, 125]), 4: array([  5,   9,  12,  13,  22,  24,  25,  26,  29,  33,  38,  39,  40,
+        41,  43,  51,  54,  58,  60,  62,  66,  67,  83,  88,  96, 100,
+       103, 104, 111])}
+INFO 2019-12-29 16:42:47,735 [434] batch_control: class index after: 
+INFO 2019-12-29 16:42:47,735 [435] batch_control: {0: array([  2,  16,  21,  34,  36,  46,  47,  50,  55,  56,  71,  85, 105,
+       109, 116, 117, 121, 124, 128, 129, 130, 131, 132, 133, 134]), 1: array([  0,   1,  10,  17,  18,  19,  23,  27,  28,  32,  42,  53,  59,
+        64,  65,  69,  70,  74,  76,  77,  78,  82,  84,  87,  91,  93,
+        94,  95,  97,  98,  99, 102, 106, 108, 115, 118, 123, 127]), 2: array([  4,   6,   8,  11,  20,  37,  44,  48,  52,  61,  68,  72,  73,
+        75,  80,  86,  89,  92, 101, 110, 112, 114, 126, 135, 136]), 3: array([  3,   7,  14,  15,  30,  31,  35,  45,  49,  57,  63,  79,  81,
+        90, 107, 113, 119, 120, 122, 125, 137, 138, 139, 140, 141]), 4: array([  5,   9,  12,  13,  22,  24,  25,  26,  29,  33,  38,  39,  40,
+        41,  43,  51,  54,  58,  60,  62,  66,  67,  83,  88,  96, 100,
+       103, 104, 111])}
+INFO 2019-12-29 16:42:47,736 [436] batch_control: coefficient vector: 
+INFO 2019-12-29 16:42:47,737 [437] batch_control: [25.0, 38.0, 25.0, 25.0, 29.0]
+INFO 2019-12-29 16:42:47,737 [199] cnn_training: Weighted train
+INFO 2019-12-29 16:42:54,844 [223] cnn_training: step 0, testing acc with batch: 0.24242425
+INFO 2019-12-29 16:42:55,202 [229] cnn_training: Best eval value at current epoch: 0.24242425 saved to ../object/lstmfcn_ges/fcn_classification/cnn_model_folder/train_0_atten0_act3_c8_1_p-1_-1_c5_1_p-1_-1_c3_1_p-1_-1_best.ckpt
+INFO 2019-12-29 16:42:59,279 [151] cnn_training: Random Epoch: 1[ 18 168  63 175  71]
+INFO 2019-12-29 16:43:08,406 [151] cnn_training: Random Epoch: 2[175  40  34  90 145]
+INFO 2019-12-29 16:43:17,052 [151] cnn_training: Random Epoch: 3[112  29 180 166 191]
+INFO 2019-12-29 16:43:25,832 [151] cnn_training: Random Epoch: 4[ 51  38 181 144  64]
+INFO 2019-12-29 16:43:34,614 [151] cnn_training: Random Epoch: 5[ 11 144  34 173   1]
+INFO 2019-12-29 16:43:43,520 [151] cnn_training: Random Epoch: 6[119  77 191 148 153]
+INFO 2019-12-29 16:43:52,279 [151] cnn_training: Random Epoch: 7[ 56   4 169  13  93]
+INFO 2019-12-29 16:44:01,234 [151] cnn_training: Random Epoch: 8[ 66 197 153  84 132]
+INFO 2019-12-29 16:44:09,958 [151] cnn_training: Random Epoch: 9[ 67  69 191 160  65]
+INFO 2019-12-29 16:44:18,725 [151] cnn_training: Random Epoch: 10[ 80  39 154  23  44]
+INFO 2019-12-29 16:44:27,814 [151] cnn_training: Random Epoch: 11[ 59   5  20 192  52]
+INFO 2019-12-29 16:44:36,654 [151] cnn_training: Random Epoch: 12[159  33 189  83  22]
+INFO 2019-12-29 16:44:45,497 [151] cnn_training: Random Epoch: 13[151  11 132  94  86]
+INFO 2019-12-29 16:44:54,279 [151] cnn_training: Random Epoch: 14[ 70  84  23  69 111]
+INFO 2019-12-29 16:45:03,184 [151] cnn_training: Random Epoch: 15[114 153 196 194   5]
+INFO 2019-12-29 16:45:12,071 [151] cnn_training: Random Epoch: 16[152  89  12  72 125]
+INFO 2019-12-29 16:45:20,984 [151] cnn_training: Random Epoch: 17[105  32  52 126 188]
+INFO 2019-12-29 16:45:29,883 [151] cnn_training: Random Epoch: 18[  0 145 122 175 187]
+INFO 2019-12-29 16:45:38,617 [151] cnn_training: Random Epoch: 19[149 121  48 134 123]
+INFO 2019-12-29 16:45:47,339 [151] cnn_training: Random Epoch: 20[ 31  75 146  37  82]
+INFO 2019-12-29 16:45:56,176 [151] cnn_training: Random Epoch: 21[106  28  13  51 190]
+INFO 2019-12-29 16:46:05,163 [151] cnn_training: Random Epoch: 22[143   9  17  20  45]
+INFO 2019-12-29 16:46:13,769 [151] cnn_training: Random Epoch: 23[110  46  36  97  95]
+INFO 2019-12-29 16:46:22,764 [151] cnn_training: Random Epoch: 24[ 64 183 167 172  44]
+INFO 2019-12-29 16:46:31,482 [151] cnn_training: Random Epoch: 25[190 109 101 125  48]
+INFO 2019-12-29 16:46:40,446 [151] cnn_training: Random Epoch: 26[147 134  82 170 101]
+INFO 2019-12-29 16:46:49,287 [151] cnn_training: Random Epoch: 27[ 66 136  30  25 186]
+INFO 2019-12-29 16:46:57,799 [151] cnn_training: Random Epoch: 28[147  12  90  27  63]
+INFO 2019-12-29 16:47:06,665 [151] cnn_training: Random Epoch: 29[ 67  24 169  65  61]
+INFO 2019-12-29 16:47:15,471 [151] cnn_training: Random Epoch: 30[114 111 143  56  45]
+INFO 2019-12-29 16:47:24,441 [151] cnn_training: Random Epoch: 31[142 153  26 158 123]
+INFO 2019-12-29 16:47:33,118 [151] cnn_training: Random Epoch: 32[173  54  55  17 147]
+INFO 2019-12-29 16:47:41,924 [151] cnn_training: Random Epoch: 33[130 127  73 172  46]
+INFO 2019-12-29 16:47:50,739 [151] cnn_training: Random Epoch: 34[ 15  69 175  75 115]
+INFO 2019-12-29 16:47:59,570 [151] cnn_training: Random Epoch: 35[184  10  76  74  86]
+INFO 2019-12-29 16:48:08,567 [151] cnn_training: Random Epoch: 36[ 64  74  94 141  80]
+INFO 2019-12-29 16:48:17,257 [151] cnn_training: Random Epoch: 37[122  80  65  61 151]
+INFO 2019-12-29 16:48:26,092 [151] cnn_training: Random Epoch: 38[193  93 145 103  66]
+INFO 2019-12-29 16:48:34,861 [151] cnn_training: Random Epoch: 39[124 137  58  84 195]
+INFO 2019-12-29 16:48:43,900 [151] cnn_training: Random Epoch: 40[116  20 167  85 171]
+INFO 2019-12-29 16:48:52,759 [151] cnn_training: Random Epoch: 41[ 96   5 116  35 180]
+INFO 2019-12-29 16:49:01,456 [151] cnn_training: Random Epoch: 42[ 96  63 167 194  68]
+INFO 2019-12-29 16:49:10,283 [151] cnn_training: Random Epoch: 43[ 65 114  16 141 156]
+INFO 2019-12-29 16:49:19,223 [151] cnn_training: Random Epoch: 44[ 55 183  66  39  97]
+INFO 2019-12-29 16:49:27,950 [151] cnn_training: Random Epoch: 45[ 48  23  58 133  89]
+INFO 2019-12-29 16:49:36,688 [151] cnn_training: Random Epoch: 46[45 72 40 58 25]
+INFO 2019-12-29 16:49:45,445 [151] cnn_training: Random Epoch: 47[123  37   4 138  17]
+INFO 2019-12-29 16:49:54,306 [151] cnn_training: Random Epoch: 48[  5  91   0 138 108]
+INFO 2019-12-29 16:50:03,144 [151] cnn_training: Random Epoch: 49[ 75  93  31  84 172]
+INFO 2019-12-29 16:50:11,902 [151] cnn_training: Random Epoch: 50[193  76 141 131 179]
+INFO 2019-12-29 16:50:11,904 [385] batch_control: class index before: 
+INFO 2019-12-29 16:50:11,904 [386] batch_control: {0: array([  3,   7,   8,   9,  12,  17,  22,  33,  44,  45,  50,  55,  74,
+        81,  84,  88,  91, 108, 109, 113, 117]), 1: array([  4,  19,  23,  24,  32,  34,  35,  38,  41,  43,  49,  51,  54,
+        60,  61,  70,  72,  73,  76,  79,  80,  83,  90,  93,  94,  97,
+        98, 100, 105, 111, 114, 115, 116, 119, 121]), 2: array([ 10,  11,  13,  16,  28,  46,  48,  53,  59,  62,  64,  69,  75,
+        89,  92,  99, 104, 122, 124]), 3: array([  2,  15,  18,  25,  26,  29,  30,  37,  39,  42,  56,  57,  58,
+        63,  65,  66,  68,  71,  82,  85,  86,  87,  95,  96, 106, 118,
+       125]), 4: array([  0,   1,   5,   6,  14,  20,  21,  27,  31,  36,  40,  47,  52,
+        67,  77,  78, 101, 102, 103, 107, 110, 112, 120, 123, 126, 127])}
+INFO 2019-12-29 16:50:11,906 [434] batch_control: class index after: 
+INFO 2019-12-29 16:50:11,906 [435] batch_control: {0: array([  3,   7,   8,   9,  12,  17,  22,  33,  44,  45,  50,  55,  74,
+        81,  84,  88,  91, 108, 109, 113, 117, 128, 129, 130, 131]), 1: array([  4,  19,  23,  24,  32,  34,  35,  38,  41,  43,  49,  51,  54,
+        60,  61,  70,  72,  73,  76,  79,  80,  83,  90,  93,  94,  97,
+        98, 100, 105, 111, 114, 115, 116, 119, 121]), 2: array([ 10,  11,  13,  16,  28,  46,  48,  53,  59,  62,  64,  69,  75,
+        89,  92,  99, 104, 122, 124, 132, 133, 134, 135, 136, 137]), 3: array([  2,  15,  18,  25,  26,  29,  30,  37,  39,  42,  56,  57,  58,
+        63,  65,  66,  68,  71,  82,  85,  86,  87,  95,  96, 106, 118,
+       125]), 4: array([  0,   1,   5,   6,  14,  20,  21,  27,  31,  36,  40,  47,  52,
+        67,  77,  78, 101, 102, 103, 107, 110, 112, 120, 123, 126, 127])}
+INFO 2019-12-29 16:50:11,908 [436] batch_control: coefficient vector: 
+INFO 2019-12-29 16:50:11,908 [437] batch_control: [25.0, 35.0, 25.0, 27.0, 26.0]
+INFO 2019-12-29 16:50:11,908 [199] cnn_training: Weighted train
+INFO 2019-12-29 16:50:17,812 [223] cnn_training: step 100, testing acc with batch: 0.54545456
+INFO 2019-12-29 16:50:18,076 [229] cnn_training: Best eval value at current epoch: 0.54545456 saved to ../object/lstmfcn_ges/fcn_classification/cnn_model_folder/train_0_atten0_act3_c8_1_p-1_-1_c5_1_p-1_-1_c3_1_p-1_-1_best.ckpt
+INFO 2019-12-29 16:50:22,131 [151] cnn_training: Random Epoch: 51[170  24 151  20  54]
+INFO 2019-12-29 16:50:31,083 [151] cnn_training: Random Epoch: 52[ 35  88 156   7 176]
+INFO 2019-12-29 16:50:40,033 [151] cnn_training: Random Epoch: 53[116  68 111  56 166]
+INFO 2019-12-29 16:50:48,872 [151] cnn_training: Random Epoch: 54[191  52 141   1 153]
+INFO 2019-12-29 16:50:57,794 [151] cnn_training: Random Epoch: 55[177 145 185 119 184]
+INFO 2019-12-29 16:51:06,565 [151] cnn_training: Random Epoch: 56[ 79 116 135 129 124]
+INFO 2019-12-29 16:51:15,285 [151] cnn_training: Random Epoch: 57[168 124  71 120  12]
+INFO 2019-12-29 16:51:24,103 [151] cnn_training: Random Epoch: 58[152  45  90  17  84]
+INFO 2019-12-29 16:51:33,071 [151] cnn_training: Random Epoch: 59[ 41 189 130 184  48]
+INFO 2019-12-29 16:51:41,753 [151] cnn_training: Random Epoch: 60[123 164 166  36 132]
+INFO 2019-12-29 16:51:50,614 [151] cnn_training: Random Epoch: 61[155 109   0  56 112]
+INFO 2019-12-29 16:51:59,607 [151] cnn_training: Random Epoch: 62[ 85  62  86 172 128]
+INFO 2019-12-29 16:52:08,511 [151] cnn_training: Random Epoch: 63[ 46 160  32  36  40]
+INFO 2019-12-29 16:52:17,222 [151] cnn_training: Random Epoch: 64[144 179 151 188  95]
+INFO 2019-12-29 16:52:26,142 [151] cnn_training: Random Epoch: 65[ 58 162  41 155  14]
+INFO 2019-12-29 16:52:35,037 [151] cnn_training: Random Epoch: 66[ 21  12 100  75 145]
+INFO 2019-12-29 16:52:43,980 [151] cnn_training: Random Epoch: 67[  7 147 104 103  82]
+INFO 2019-12-29 16:52:53,005 [151] cnn_training: Random Epoch: 68[ 32  77  71 165 109]
+INFO 2019-12-29 16:53:01,593 [151] cnn_training: Random Epoch: 69[175 129 184  13 136]
+INFO 2019-12-29 16:53:10,289 [151] cnn_training: Random Epoch: 70[ 92 108 176 159  85]
+INFO 2019-12-29 16:53:19,388 [151] cnn_training: Random Epoch: 71[162  17 109 195  57]
+INFO 2019-12-29 16:53:28,174 [151] cnn_training: Random Epoch: 72[172 121  28 138  69]
+INFO 2019-12-29 16:53:36,624 [151] cnn_training: Random Epoch: 73[174  43  99 167  75]
+INFO 2019-12-29 16:53:45,347 [151] cnn_training: Random Epoch: 74[115 134 124  33  60]
+INFO 2019-12-29 16:53:54,130 [151] cnn_training: Random Epoch: 75[174 136  46 122 101]
+INFO 2019-12-29 16:54:02,823 [151] cnn_training: Random Epoch: 76[ 22 167 137  18  29]
+INFO 2019-12-29 16:54:11,886 [151] cnn_training: Random Epoch: 77[ 34 192   7  22 145]
+INFO 2019-12-29 16:54:20,677 [151] cnn_training: Random Epoch: 78[127  16  20  90  48]
+INFO 2019-12-29 16:54:29,357 [151] cnn_training: Random Epoch: 79[  2 118 171 132   6]
+INFO 2019-12-29 16:54:38,165 [151] cnn_training: Random Epoch: 80[ 80  52 144  89  96]
+INFO 2019-12-29 16:54:46,835 [151] cnn_training: Random Epoch: 81[100  92  21  23 159]
+INFO 2019-12-29 16:54:55,725 [151] cnn_training: Random Epoch: 82[169 119  46  90 106]
+INFO 2019-12-29 16:55:04,534 [151] cnn_training: Random Epoch: 83[ 85 127 128  90  18]
+INFO 2019-12-29 16:55:13,620 [151] cnn_training: Random Epoch: 84[145 153  30  68 128]
+INFO 2019-12-29 16:55:22,398 [151] cnn_training: Random Epoch: 85[ 11 115 127  28 175]
+INFO 2019-12-29 16:55:31,419 [151] cnn_training: Random Epoch: 86[128  49  66 104 107]
+INFO 2019-12-29 16:55:40,456 [151] cnn_training: Random Epoch: 87[ 77 169 180  30  70]
+INFO 2019-12-29 16:55:49,273 [151] cnn_training: Random Epoch: 88[172  71  13 111  92]
+INFO 2019-12-29 16:55:58,062 [151] cnn_training: Random Epoch: 89[197   2 156  13  39]
+INFO 2019-12-29 16:56:07,026 [151] cnn_training: Random Epoch: 90[61 14 76 42 12]
+INFO 2019-12-29 16:56:15,756 [151] cnn_training: Random Epoch: 91[161  21  68 191  39]
+INFO 2019-12-29 16:56:24,684 [151] cnn_training: Random Epoch: 92[111  20  27  23  11]
+INFO 2019-12-29 16:56:33,492 [151] cnn_training: Random Epoch: 93[170  34  73   7 136]
+INFO 2019-12-29 16:56:42,254 [151] cnn_training: Random Epoch: 94[89 50 68 28 65]
+INFO 2019-12-29 16:56:50,985 [151] cnn_training: Random Epoch: 95[132  81  76  95 114]
+INFO 2019-12-29 16:56:59,960 [151] cnn_training: Random Epoch: 96[109  65  73  92 101]
+INFO 2019-12-29 16:57:08,902 [151] cnn_training: Random Epoch: 97[ 35 102   5 165 164]
+INFO 2019-12-29 16:57:17,648 [151] cnn_training: Random Epoch: 98[ 83  20  70  54 112]
+INFO 2019-12-29 16:57:26,437 [151] cnn_training: Random Epoch: 99[ 52 164 125 114 113]
+INFO 2019-12-29 16:57:35,398 [151] cnn_training: Random Epoch: 100[133 117  72  65 189]
+INFO 2019-12-29 16:57:35,407 [199] cnn_training: Weighted train
+INFO 2019-12-29 16:57:41,519 [223] cnn_training: step 200, testing acc with batch: 0.5707071
+INFO 2019-12-29 16:57:41,782 [229] cnn_training: Best eval value at current epoch: 0.5707071 saved to ../object/lstmfcn_ges/fcn_classification/cnn_model_folder/train_0_atten0_act3_c8_1_p-1_-1_c5_1_p-1_-1_c3_1_p-1_-1_best.ckpt
+INFO 2019-12-29 16:57:45,958 [151] cnn_training: Random Epoch: 101[126 104  99  92 111]
+INFO 2019-12-29 16:57:54,901 [151] cnn_training: Random Epoch: 102[160 139 173 155 130]
+INFO 2019-12-29 16:58:03,643 [151] cnn_training: Random Epoch: 103[ 99  57  85 116  29]
+INFO 2019-12-29 16:58:12,225 [151] cnn_training: Random Epoch: 104[143  31  98   9  89]
+INFO 2019-12-29 16:58:21,191 [151] cnn_training: Random Epoch: 105[104 128  49  34  64]
+INFO 2019-12-29 16:58:29,826 [151] cnn_training: Random Epoch: 106[103  64  44 148 189]
+INFO 2019-12-29 16:58:39,167 [151] cnn_training: Random Epoch: 107[ 55  36  60 179   3]
+INFO 2019-12-29 16:58:47,949 [151] cnn_training: Random Epoch: 108[ 34 119  19  44 191]
+INFO 2019-12-29 16:58:56,646 [151] cnn_training: Random Epoch: 109[178  22 121  89  77]
+INFO 2019-12-29 16:59:05,763 [151] cnn_training: Random Epoch: 110[  1 194  23  58 127]
+INFO 2019-12-29 16:59:14,580 [151] cnn_training: Random Epoch: 111[167 195 147 124 140]
+INFO 2019-12-29 16:59:23,564 [151] cnn_training: Random Epoch: 112[128  79 125 191  35]
+INFO 2019-12-29 16:59:32,671 [151] cnn_training: Random Epoch: 113[140  82 137  19 182]
+INFO 2019-12-29 16:59:41,450 [151] cnn_training: Random Epoch: 114[ 24 160 135  19 186]
+INFO 2019-12-29 16:59:50,180 [151] cnn_training: Random Epoch: 115[171 155  54 162   6]
+INFO 2019-12-29 16:59:59,070 [151] cnn_training: Random Epoch: 116[150 138 141 180   6]
+INFO 2019-12-29 17:00:08,103 [151] cnn_training: Random Epoch: 117[127 155 133  30  77]
+INFO 2019-12-29 17:00:17,108 [151] cnn_training: Random Epoch: 118[ 41 125 153 127  36]
+INFO 2019-12-29 17:00:25,864 [151] cnn_training: Random Epoch: 119[157  58 183  54  49]
+INFO 2019-12-29 17:00:34,685 [151] cnn_training: Random Epoch: 120[ 68 136 191 135 158]
+INFO 2019-12-29 17:00:43,553 [151] cnn_training: Random Epoch: 121[ 87 118  80 196  62]
+INFO 2019-12-29 17:00:52,697 [151] cnn_training: Random Epoch: 122[ 70 121 115  89 166]
+INFO 2019-12-29 17:01:01,578 [151] cnn_training: Random Epoch: 123[ 95  30   2  43 120]
+INFO 2019-12-29 17:01:10,137 [151] cnn_training: Random Epoch: 124[156  26  62  31  20]
+INFO 2019-12-29 17:01:19,064 [151] cnn_training: Random Epoch: 125[  5 124 151  27 185]
+INFO 2019-12-29 17:01:27,804 [151] cnn_training: Random Epoch: 126[123 135 101 109 191]
+INFO 2019-12-29 17:01:36,845 [151] cnn_training: Random Epoch: 127[103 160 149  97 130]
+INFO 2019-12-29 17:01:45,601 [151] cnn_training: Random Epoch: 128[174 166  45 147 129]
+INFO 2019-12-29 17:01:54,465 [151] cnn_training: Random Epoch: 129[ 43  37  59 118 109]
+INFO 2019-12-29 17:02:03,207 [151] cnn_training: Random Epoch: 130[137 144 187 191  26]
+INFO 2019-12-29 17:02:11,813 [151] cnn_training: Random Epoch: 131[ 18  41   9  30 113]
+INFO 2019-12-29 17:02:20,726 [151] cnn_training: Random Epoch: 132[ 56 101 161 116  26]
+INFO 2019-12-29 17:02:29,625 [151] cnn_training: Random Epoch: 133[  7  26  73 129 152]
+INFO 2019-12-29 17:02:38,350 [151] cnn_training: Random Epoch: 134[ 18 154 128  43 103]
+INFO 2019-12-29 17:02:46,979 [151] cnn_training: Random Epoch: 135[171   8  84 144  69]
+INFO 2019-12-29 17:02:55,787 [151] cnn_training: Random Epoch: 136[141  78  30 123 135]
+INFO 2019-12-29 17:03:04,774 [151] cnn_training: Random Epoch: 137[ 59 100 120  84   3]
+INFO 2019-12-29 17:03:13,463 [151] cnn_training: Random Epoch: 138[142 158 164  58  64]
+INFO 2019-12-29 17:03:21,949 [151] cnn_training: Random Epoch: 139[155  13  58  84 112]
+INFO 2019-12-29 17:03:30,697 [151] cnn_training: Random Epoch: 140[ 91 178  75  71 102]
+INFO 2019-12-29 17:03:39,606 [151] cnn_training: Random Epoch: 141[135  91 108 155  49]
+INFO 2019-12-29 17:03:48,499 [151] cnn_training: Random Epoch: 142[ 97 147  29 116  52]
+INFO 2019-12-29 17:03:57,377 [151] cnn_training: Random Epoch: 143[186  10 196  27  78]
+INFO 2019-12-29 17:04:06,076 [151] cnn_training: Random Epoch: 144[ 25  15 107 161 165]
+INFO 2019-12-29 17:04:14,785 [151] cnn_training: Random Epoch: 145[ 23 144 196 191 162]
+INFO 2019-12-29 17:04:23,404 [151] cnn_training: Random Epoch: 146[ 39  79  61 194  75]
+INFO 2019-12-29 17:04:32,714 [151] cnn_training: Random Epoch: 147[  7  41 195 161  89]
+INFO 2019-12-29 17:04:41,402 [151] cnn_training: Random Epoch: 148[ 61  24 159  31 167]
+INFO 2019-12-29 17:04:50,331 [151] cnn_training: Random Epoch: 149[ 95 156  23 136  39]
+INFO 2019-12-29 17:04:59,296 [151] cnn_training: Random Epoch: 150[149  56  71 134  29]
+INFO 2019-12-29 17:04:59,303 [199] cnn_training: Weighted train
+INFO 2019-12-29 17:05:05,329 [223] cnn_training: step 300, testing acc with batch: 0.5858586
+INFO 2019-12-29 17:05:05,597 [229] cnn_training: Best eval value at current epoch: 0.5858586 saved to ../object/lstmfcn_ges/fcn_classification/cnn_model_folder/train_0_atten0_act3_c8_1_p-1_-1_c5_1_p-1_-1_c3_1_p-1_-1_best.ckpt
+INFO 2019-12-29 17:05:09,680 [151] cnn_training: Random Epoch: 151[13 96 83 59 54]
+INFO 2019-12-29 17:05:18,421 [151] cnn_training: Random Epoch: 152[ 61  96  45   7 197]
+INFO 2019-12-29 17:05:27,387 [151] cnn_training: Random Epoch: 153[102  99 156 190  52]
+INFO 2019-12-29 17:05:36,052 [151] cnn_training: Random Epoch: 154[71 15 23 74 29]
+INFO 2019-12-29 17:05:44,761 [151] cnn_training: Random Epoch: 155[127  61 153  69 167]
+INFO 2019-12-29 17:05:53,524 [151] cnn_training: Random Epoch: 156[178 171  76 129 153]
+INFO 2019-12-29 17:06:02,241 [151] cnn_training: Random Epoch: 157[ 49 113   9  75   0]
+INFO 2019-12-29 17:06:11,046 [151] cnn_training: Random Epoch: 158[120  39 188 122  12]
+INFO 2019-12-29 17:06:19,900 [151] cnn_training: Random Epoch: 159[171 196 147 143 160]
+INFO 2019-12-29 17:06:28,548 [151] cnn_training: Random Epoch: 160[139 131  22   4 107]
+INFO 2019-12-29 17:06:37,373 [151] cnn_training: Random Epoch: 161[147  53   0 140  83]
+INFO 2019-12-29 17:06:46,073 [151] cnn_training: Random Epoch: 162[ 55  97 122 178  79]
+INFO 2019-12-29 17:06:55,181 [151] cnn_training: Random Epoch: 163[ 87  25 111  97  59]
+INFO 2019-12-29 17:07:03,823 [151] cnn_training: Random Epoch: 164[ 20  14  31   7 176]
+INFO 2019-12-29 17:07:12,554 [151] cnn_training: Random Epoch: 165[195 118 183  74 153]
+INFO 2019-12-29 17:07:21,216 [151] cnn_training: Random Epoch: 166[ 94  92 142   9  60]
+INFO 2019-12-29 17:07:29,902 [151] cnn_training: Random Epoch: 167[ 91 162 180  82  29]
+INFO 2019-12-29 17:07:39,039 [151] cnn_training: Random Epoch: 168[194 189 128  98 151]
+INFO 2019-12-29 17:07:47,725 [151] cnn_training: Random Epoch: 169[177 186 146 168  56]
+INFO 2019-12-29 17:07:56,411 [151] cnn_training: Random Epoch: 170[166  41 118 179 196]
+INFO 2019-12-29 17:08:05,249 [151] cnn_training: Random Epoch: 171[ 54 179 177  83 156]
+INFO 2019-12-29 17:08:13,845 [151] cnn_training: Random Epoch: 172[ 81 109  45 116 150]
+INFO 2019-12-29 17:08:22,859 [151] cnn_training: Random Epoch: 173[ 90 140 131  47  63]
+INFO 2019-12-29 17:08:31,563 [151] cnn_training: Random Epoch: 174[  9 128 113  63 193]
+INFO 2019-12-29 17:08:40,377 [151] cnn_training: Random Epoch: 175[123  50 151 183  61]
+INFO 2019-12-29 17:08:49,107 [151] cnn_training: Random Epoch: 176[ 45 163  85   2 149]
+INFO 2019-12-29 17:08:57,797 [151] cnn_training: Random Epoch: 177[134 195  56 163 170]
+INFO 2019-12-29 17:09:06,688 [151] cnn_training: Random Epoch: 178[89  3 50 92 31]
+INFO 2019-12-29 17:09:15,441 [151] cnn_training: Random Epoch: 179[122 159 193  69 194]
+INFO 2019-12-29 17:09:24,379 [151] cnn_training: Random Epoch: 180[ 67  56 149 163 171]
+INFO 2019-12-29 17:09:33,040 [151] cnn_training: Random Epoch: 181[ 63 162  33 140  20]
+INFO 2019-12-29 17:09:41,804 [151] cnn_training: Random Epoch: 182[ 73  64 190 115  24]
+INFO 2019-12-29 17:09:50,559 [151] cnn_training: Random Epoch: 183[103  11  36 137 148]
+INFO 2019-12-29 17:09:59,039 [151] cnn_training: Random Epoch: 184[180  90 190  54  74]
+INFO 2019-12-29 17:10:07,664 [151] cnn_training: Random Epoch: 185[133  39 184 192  83]
+INFO 2019-12-29 17:10:16,715 [151] cnn_training: Random Epoch: 186[ 69 173 192  39 174]
+INFO 2019-12-29 17:10:25,512 [151] cnn_training: Random Epoch: 187[ 95  37 121 140 170]
+INFO 2019-12-29 17:10:34,546 [151] cnn_training: Random Epoch: 188[ 44  74 168 181  23]
+INFO 2019-12-29 17:10:43,175 [151] cnn_training: Random Epoch: 189[132  15  59 188 108]
+INFO 2019-12-29 17:10:52,005 [151] cnn_training: Random Epoch: 190[196  91  43 111  75]
+INFO 2019-12-29 17:11:00,795 [151] cnn_training: Random Epoch: 191[152  24  56 116   1]
+INFO 2019-12-29 17:11:09,563 [151] cnn_training: Random Epoch: 192[149 108 110  45 121]
+INFO 2019-12-29 17:11:18,125 [151] cnn_training: Random Epoch: 193[ 91 157  23  95 180]
+INFO 2019-12-29 17:11:27,013 [151] cnn_training: Random Epoch: 194[125   4  70  18 171]
+INFO 2019-12-29 17:11:35,873 [151] cnn_training: Random Epoch: 195[  6 136  35 101 139]
+INFO 2019-12-29 17:11:44,811 [151] cnn_training: Random Epoch: 196[42 51 40 58 36]
+INFO 2019-12-29 17:11:53,475 [151] cnn_training: Random Epoch: 197[ 36 150 157 181  73]
+INFO 2019-12-29 17:12:02,190 [151] cnn_training: Random Epoch: 198[103  29 102 141  11]
+INFO 2019-12-29 17:12:10,946 [151] cnn_training: Random Epoch: 199[152  43 188 185  83]
+INFO 2019-12-29 17:12:19,600 [151] cnn_training: Random Epoch: 200[191  45 136 155  43]
+INFO 2019-12-29 17:12:19,606 [199] cnn_training: Weighted train
+INFO 2019-12-29 17:12:25,552 [223] cnn_training: step 400, testing acc with batch: 0.56565654
+INFO 2019-12-29 17:12:29,678 [151] cnn_training: Random Epoch: 201[122 168 144  19  22]
+INFO 2019-12-29 17:12:38,305 [151] cnn_training: Random Epoch: 202[ 5 54 44 83 18]
+INFO 2019-12-29 17:12:47,079 [151] cnn_training: Random Epoch: 203[123  78  74 106 132]
+INFO 2019-12-29 17:12:55,889 [151] cnn_training: Random Epoch: 204[104  85  25  38 145]
+INFO 2019-12-29 17:13:04,513 [151] cnn_training: Random Epoch: 205[ 94 170  48 146 107]
+INFO 2019-12-29 17:13:13,600 [151] cnn_training: Random Epoch: 206[189 154 192   9  90]
+INFO 2019-12-29 17:13:22,525 [151] cnn_training: Random Epoch: 207[ 88   2  77 151 109]
+INFO 2019-12-29 17:13:31,575 [151] cnn_training: Random Epoch: 208[ 16  22 149  59  98]
+INFO 2019-12-29 17:13:40,683 [151] cnn_training: Random Epoch: 209[116  77 108 182 149]
+INFO 2019-12-29 17:13:49,659 [151] cnn_training: Random Epoch: 210[189  73 193  21 102]
+INFO 2019-12-29 17:13:58,429 [151] cnn_training: Random Epoch: 211[ 25  29 108 132  20]
+INFO 2019-12-29 17:14:07,217 [151] cnn_training: Random Epoch: 212[ 33  20  36 133  12]
+INFO 2019-12-29 17:14:16,129 [151] cnn_training: Random Epoch: 213[ 25 127 166  77  57]
+INFO 2019-12-29 17:14:25,096 [151] cnn_training: Random Epoch: 214[ 73 174 102  14   2]
+INFO 2019-12-29 17:14:34,105 [151] cnn_training: Random Epoch: 215[167  48 168 171  52]
+INFO 2019-12-29 17:14:42,917 [151] cnn_training: Random Epoch: 216[171   1   3 168  79]
+INFO 2019-12-29 17:14:51,618 [151] cnn_training: Random Epoch: 217[121 159  43  26  38]
+INFO 2019-12-29 17:15:00,227 [151] cnn_training: Random Epoch: 218[144  54  16 147  25]
+INFO 2019-12-29 17:15:09,116 [151] cnn_training: Random Epoch: 219[134  50 106  49  16]
+INFO 2019-12-29 17:15:17,968 [151] cnn_training: Random Epoch: 220[ 75  40  87 195  27]
+INFO 2019-12-29 17:15:26,625 [151] cnn_training: Random Epoch: 221[ 67 175 140  41  84]
+INFO 2019-12-29 17:15:35,304 [151] cnn_training: Random Epoch: 222[191 169  25 104  36]
+INFO 2019-12-29 17:15:44,147 [151] cnn_training: Random Epoch: 223[108 123 170  32  33]
+INFO 2019-12-29 17:15:53,194 [151] cnn_training: Random Epoch: 224[ 19 164 183 108 192]
+INFO 2019-12-29 17:16:01,893 [151] cnn_training: Random Epoch: 225[129  80  53  59  18]
+INFO 2019-12-29 17:16:10,546 [151] cnn_training: Random Epoch: 226[ 86 147 197  98 195]
+INFO 2019-12-29 17:16:19,204 [151] cnn_training: Random Epoch: 227[158 130 183 154 125]
+INFO 2019-12-29 17:16:28,050 [151] cnn_training: Random Epoch: 228[ 47 173  97 194 121]
+INFO 2019-12-29 17:16:36,777 [151] cnn_training: Random Epoch: 229[147  15 103  66  27]
+INFO 2019-12-29 17:16:45,475 [151] cnn_training: Random Epoch: 230[  3 119 137 156  18]
+INFO 2019-12-29 17:16:53,963 [151] cnn_training: Random Epoch: 231[107 145  46 154  33]
+INFO 2019-12-29 17:17:02,706 [151] cnn_training: Random Epoch: 232[ 43 162 186 154 146]
+INFO 2019-12-29 17:17:11,354 [151] cnn_training: Random Epoch: 233[111 136 197 149  25]
+INFO 2019-12-29 17:17:20,383 [151] cnn_training: Random Epoch: 234[ 11 117 109  58  25]
+INFO 2019-12-29 17:17:29,086 [151] cnn_training: Random Epoch: 235[ 14 103 188  61  96]
+INFO 2019-12-29 17:17:37,654 [151] cnn_training: Random Epoch: 236[ 85  45  68  19 108]
+INFO 2019-12-29 17:17:46,537 [151] cnn_training: Random Epoch: 237[ 40 127  26  81  87]
+INFO 2019-12-29 17:17:55,354 [151] cnn_training: Random Epoch: 238[ 59 181 135  64  40]
+INFO 2019-12-29 17:18:04,380 [151] cnn_training: Random Epoch: 239[ 67  26 135 184 192]
+INFO 2019-12-29 17:18:13,135 [151] cnn_training: Random Epoch: 240[ 38  55 111 177 106]
+INFO 2019-12-29 17:18:22,005 [151] cnn_training: Random Epoch: 241[119  69  78 166 122]
+INFO 2019-12-29 17:18:30,794 [151] cnn_training: Random Epoch: 242[ 95 132   3 119 133]
+INFO 2019-12-29 17:18:39,507 [151] cnn_training: Random Epoch: 243[117 133 100 172  24]
+INFO 2019-12-29 17:18:48,375 [151] cnn_training: Random Epoch: 244[191 174 190   5  34]
+INFO 2019-12-29 17:18:57,209 [151] cnn_training: Random Epoch: 245[ 11 110 166  71 118]
+INFO 2019-12-29 17:19:05,967 [151] cnn_training: Random Epoch: 246[171  22  23 166 192]
+INFO 2019-12-29 17:19:14,674 [151] cnn_training: Random Epoch: 247[118  15 143 182 172]
+INFO 2019-12-29 17:19:23,581 [151] cnn_training: Random Epoch: 248[122 167  49 182   0]
+INFO 2019-12-29 17:19:32,290 [151] cnn_training: Random Epoch: 249[  4  43 127   2 129]
+INFO 2019-12-29 17:19:41,214 [151] cnn_training: Random Epoch: 250[115 177 130  80 185]
+INFO 2019-12-29 17:19:41,220 [199] cnn_training: Weighted train
+INFO 2019-12-29 17:19:47,432 [223] cnn_training: step 500, testing acc with batch: 0.56565654
+INFO 2019-12-29 17:19:51,607 [151] cnn_training: Random Epoch: 251[ 35 105 107 161  47]
+INFO 2019-12-29 17:20:00,299 [151] cnn_training: Random Epoch: 252[143 147  70 197  32]
+INFO 2019-12-29 17:20:09,222 [151] cnn_training: Random Epoch: 253[  1  78  73 186 123]
+INFO 2019-12-29 17:20:18,229 [151] cnn_training: Random Epoch: 254[196 140 121  20 117]
+INFO 2019-12-29 17:20:26,969 [151] cnn_training: Random Epoch: 255[102  31 124  36  83]
+INFO 2019-12-29 17:20:35,744 [151] cnn_training: Random Epoch: 256[164  59 172  78  84]
+INFO 2019-12-29 17:20:44,482 [151] cnn_training: Random Epoch: 257[ 50  16  76  20 180]
+INFO 2019-12-29 17:20:53,350 [151] cnn_training: Random Epoch: 258[166  97 168  58 103]
+INFO 2019-12-29 17:21:02,241 [151] cnn_training: Random Epoch: 259[154 193 184 118 103]
+INFO 2019-12-29 17:21:11,060 [151] cnn_training: Random Epoch: 260[ 66  68 100 144 114]
+INFO 2019-12-29 17:21:19,826 [151] cnn_training: Random Epoch: 261[ 35   7 116 132  65]
+INFO 2019-12-29 17:21:28,525 [151] cnn_training: Random Epoch: 262[ 40  98 153 195 150]
+INFO 2019-12-29 17:21:37,397 [151] cnn_training: Random Epoch: 263[ 98 124  53  58  16]
+INFO 2019-12-29 17:21:46,234 [151] cnn_training: Random Epoch: 264[186  63 100  75 166]
+INFO 2019-12-29 17:21:54,999 [151] cnn_training: Random Epoch: 265[ 10  12   8 173 151]
+INFO 2019-12-29 17:22:03,653 [151] cnn_training: Random Epoch: 266[ 77 121  60 188 150]
+INFO 2019-12-29 17:22:12,305 [151] cnn_training: Random Epoch: 267[113 167   1  61  25]
+INFO 2019-12-29 17:22:21,434 [151] cnn_training: Random Epoch: 268[176  98  69  86  33]
+INFO 2019-12-29 17:22:30,064 [151] cnn_training: Random Epoch: 269[145 132 147  88  44]
+INFO 2019-12-29 17:22:39,002 [151] cnn_training: Random Epoch: 270[ 23 149 110 141 188]
+INFO 2019-12-29 17:22:47,741 [151] cnn_training: Random Epoch: 271[126 122  25 117 104]
+INFO 2019-12-29 17:22:56,637 [151] cnn_training: Random Epoch: 272[ 88 130  77 186 166]
+INFO 2019-12-29 17:23:05,660 [151] cnn_training: Random Epoch: 273[ 67   2  17  37 148]
+INFO 2019-12-29 17:23:14,631 [151] cnn_training: Random Epoch: 274[ 79  46 160 174 162]
+INFO 2019-12-29 17:23:23,760 [151] cnn_training: Random Epoch: 275[ 54 112 120 131  62]
+INFO 2019-12-29 17:23:32,571 [151] cnn_training: Random Epoch: 276[ 28 186 145 144  66]
+INFO 2019-12-29 17:23:41,337 [151] cnn_training: Random Epoch: 277[ 11 156  84  43 115]
+INFO 2019-12-29 17:23:49,869 [151] cnn_training: Random Epoch: 278[196   0 195 178  16]
+INFO 2019-12-29 17:23:58,711 [151] cnn_training: Random Epoch: 279[ 20 193 126  28 138]
+INFO 2019-12-29 17:24:07,657 [151] cnn_training: Random Epoch: 280[ 14 108 150  78 162]
+INFO 2019-12-29 17:24:16,567 [151] cnn_training: Random Epoch: 281[ 73   9 102 189  25]
+INFO 2019-12-29 17:24:25,394 [151] cnn_training: Random Epoch: 282[ 79 181 196  92   1]
+INFO 2019-12-29 17:24:34,191 [151] cnn_training: Random Epoch: 283[140  31 116  62 143]
+INFO 2019-12-29 17:24:43,100 [151] cnn_training: Random Epoch: 284[ 85 187   7   5  18]
+INFO 2019-12-29 17:24:52,149 [151] cnn_training: Random Epoch: 285[ 59  41  23 180 189]
+INFO 2019-12-29 17:25:01,158 [151] cnn_training: Random Epoch: 286[168  53  88 115 174]
+INFO 2019-12-29 17:25:10,002 [151] cnn_training: Random Epoch: 287[135  59   3 176  83]
+INFO 2019-12-29 17:25:18,868 [151] cnn_training: Random Epoch: 288[ 31  40 155 158  47]
+INFO 2019-12-29 17:25:27,453 [151] cnn_training: Random Epoch: 289[158  17 142  86 159]
+INFO 2019-12-29 17:25:36,463 [151] cnn_training: Random Epoch: 290[ 58  50 106  32 166]
+INFO 2019-12-29 17:25:45,078 [151] cnn_training: Random Epoch: 291[ 85 190  38  12  81]
+INFO 2019-12-29 17:25:53,821 [151] cnn_training: Random Epoch: 292[ 95  54 193 102  25]
+INFO 2019-12-29 17:26:02,619 [151] cnn_training: Random Epoch: 293[ 54 107   5  94  35]
+INFO 2019-12-29 17:26:11,693 [151] cnn_training: Random Epoch: 294[151  37 177  87  69]
+INFO 2019-12-29 17:26:20,756 [151] cnn_training: Random Epoch: 295[ 55 161  69  16  52]
+INFO 2019-12-29 17:26:29,554 [151] cnn_training: Random Epoch: 296[ 60 119  18 181  28]
+INFO 2019-12-29 17:26:38,320 [151] cnn_training: Random Epoch: 297[ 46  43  10 127 182]
+INFO 2019-12-29 17:26:47,307 [151] cnn_training: Random Epoch: 298[109 121 103  50 173]
+INFO 2019-12-29 17:26:56,039 [151] cnn_training: Random Epoch: 299[152  13 163 143 190]
+INFO 2019-12-29 17:27:04,852 [151] cnn_training: Random Epoch: 300[28 34 74 29 79]
+INFO 2019-12-29 17:27:04,858 [199] cnn_training: Weighted train
+INFO 2019-12-29 17:27:10,933 [223] cnn_training: step 600, testing acc with batch: 0.5808081
+INFO 2019-12-29 17:27:15,103 [151] cnn_training: Random Epoch: 301[ 30  69 173  87  96]
+INFO 2019-12-29 17:27:23,910 [151] cnn_training: Random Epoch: 302[16 83 48  1 44]
+INFO 2019-12-29 17:27:32,486 [151] cnn_training: Random Epoch: 303[124  40 176 193 117]
+INFO 2019-12-29 17:27:41,171 [151] cnn_training: Random Epoch: 304[ 68 165 100   1  10]
+INFO 2019-12-29 17:27:50,030 [151] cnn_training: Random Epoch: 305[ 33   5  23 124  58]
+INFO 2019-12-29 17:27:58,968 [151] cnn_training: Random Epoch: 306[123 124  32  84 152]
+INFO 2019-12-29 17:28:07,686 [151] cnn_training: Random Epoch: 307[130  57  33 109  90]
+INFO 2019-12-29 17:28:16,362 [151] cnn_training: Random Epoch: 308[ 35 133 119  96  26]
+INFO 2019-12-29 17:28:25,198 [151] cnn_training: Random Epoch: 309[  8 107  60  13 153]
+INFO 2019-12-29 17:28:34,256 [151] cnn_training: Random Epoch: 310[113 177 162 127  10]
+INFO 2019-12-29 17:28:43,247 [151] cnn_training: Random Epoch: 311[  7 147 133  12  81]
+INFO 2019-12-29 17:28:52,082 [151] cnn_training: Random Epoch: 312[ 61 166  53  15 131]
+INFO 2019-12-29 17:29:00,855 [151] cnn_training: Random Epoch: 313[106 129   9  68 193]
+INFO 2019-12-29 17:29:09,536 [151] cnn_training: Random Epoch: 314[132  49  79  80 145]
+INFO 2019-12-29 17:29:18,317 [151] cnn_training: Random Epoch: 315[127  34 169  95  49]
+INFO 2019-12-29 17:29:27,114 [151] cnn_training: Random Epoch: 316[ 11 118 160 165  81]
+INFO 2019-12-29 17:29:36,112 [151] cnn_training: Random Epoch: 317[ 89  21   1 112 196]
+INFO 2019-12-29 17:29:44,908 [151] cnn_training: Random Epoch: 318[124 102 187  25  62]
+INFO 2019-12-29 17:29:53,648 [151] cnn_training: Random Epoch: 319[169  78  54  52  31]
+INFO 2019-12-29 17:30:02,527 [151] cnn_training: Random Epoch: 320[ 39 168 162 181 197]
+INFO 2019-12-29 17:30:11,449 [151] cnn_training: Random Epoch: 321[127 171  60 151 163]
+INFO 2019-12-29 17:30:20,210 [151] cnn_training: Random Epoch: 322[120 100 113 110  51]
+INFO 2019-12-29 17:30:29,119 [151] cnn_training: Random Epoch: 323[120  11 173 114 186]
+INFO 2019-12-29 17:30:37,879 [151] cnn_training: Random Epoch: 324[ 16  30 118   1  73]
+INFO 2019-12-29 17:30:46,730 [151] cnn_training: Random Epoch: 325[ 23   8  82 142  31]
+INFO 2019-12-29 17:30:55,296 [151] cnn_training: Random Epoch: 326[ 96  25   5 119 161]
+INFO 2019-12-29 17:31:04,269 [151] cnn_training: Random Epoch: 327[ 61 157  25 132 162]
+INFO 2019-12-29 17:31:13,059 [151] cnn_training: Random Epoch: 328[149 158 185 102 159]
+INFO 2019-12-29 17:31:21,972 [151] cnn_training: Random Epoch: 329[ 72 110 161 102 126]
+INFO 2019-12-29 17:31:30,595 [151] cnn_training: Random Epoch: 330[167 189 126 108 170]
+INFO 2019-12-29 17:31:39,746 [151] cnn_training: Random Epoch: 331[108  89 181  16 197]
+INFO 2019-12-29 17:31:48,681 [151] cnn_training: Random Epoch: 332[ 86  52   2   1 194]
+INFO 2019-12-29 17:31:57,718 [151] cnn_training: Random Epoch: 333[158  58  23  36  21]
+INFO 2019-12-29 17:32:06,569 [151] cnn_training: Random Epoch: 334[92 28 61 89 25]
+INFO 2019-12-29 17:32:15,381 [151] cnn_training: Random Epoch: 335[147 124  73  49 152]
+INFO 2019-12-29 17:32:24,306 [151] cnn_training: Random Epoch: 336[183 185 141 169  77]
+INFO 2019-12-29 17:32:33,151 [151] cnn_training: Random Epoch: 337[161  48 179  77  12]
+INFO 2019-12-29 17:32:42,003 [151] cnn_training: Random Epoch: 338[ 44 161 135  61  41]
+INFO 2019-12-29 17:32:50,915 [151] cnn_training: Random Epoch: 339[ 61 168 160 173 162]
+INFO 2019-12-29 17:32:59,749 [151] cnn_training: Random Epoch: 340[ 45  37 186  33 185]
+INFO 2019-12-29 17:33:08,821 [151] cnn_training: Random Epoch: 341[108  63 191 181 109]
+INFO 2019-12-29 17:33:17,558 [151] cnn_training: Random Epoch: 342[ 63  55 155 140 162]
+INFO 2019-12-29 17:33:26,285 [151] cnn_training: Random Epoch: 343[ 54 101   9  56 107]
+INFO 2019-12-29 17:33:35,167 [151] cnn_training: Random Epoch: 344[ 40  14 182  31 183]
+INFO 2019-12-29 17:33:43,982 [151] cnn_training: Random Epoch: 345[105 135  66 175  87]
+INFO 2019-12-29 17:33:53,057 [151] cnn_training: Random Epoch: 346[ 13 179  91  60 174]
+INFO 2019-12-29 17:34:02,046 [151] cnn_training: Random Epoch: 347[24 14 38 54 83]
+INFO 2019-12-29 17:34:10,596 [151] cnn_training: Random Epoch: 348[ 34  42  78 152 123]
+INFO 2019-12-29 17:34:19,452 [151] cnn_training: Random Epoch: 349[189  49 194 142 105]
+INFO 2019-12-29 17:34:28,409 [151] cnn_training: Random Epoch: 350[136  85  95 134 187]
+INFO 2019-12-29 17:34:28,412 [199] cnn_training: Weighted train
+INFO 2019-12-29 17:34:34,413 [223] cnn_training: step 700, testing acc with batch: 0.57575756
+INFO 2019-12-29 17:34:38,635 [151] cnn_training: Random Epoch: 351[145 138  56  78  37]
+INFO 2019-12-29 17:34:47,478 [151] cnn_training: Random Epoch: 352[133  74  49  25  48]
+INFO 2019-12-29 17:34:56,173 [151] cnn_training: Random Epoch: 353[155  75 126 190 157]
+INFO 2019-12-29 17:35:04,844 [151] cnn_training: Random Epoch: 354[196  60   2 138 142]
+INFO 2019-12-29 17:35:13,691 [151] cnn_training: Random Epoch: 355[184 148  92  89  24]
+INFO 2019-12-29 17:35:22,665 [151] cnn_training: Random Epoch: 356[ 22  83 196  12 197]
+INFO 2019-12-29 17:35:31,553 [151] cnn_training: Random Epoch: 357[45 46  9 82 88]
+INFO 2019-12-29 17:35:40,233 [151] cnn_training: Random Epoch: 358[ 27  83  22 122  20]
+INFO 2019-12-29 17:35:48,902 [151] cnn_training: Random Epoch: 359[129 162 150  54 157]
+INFO 2019-12-29 17:35:57,707 [151] cnn_training: Random Epoch: 360[106 138  97  10  70]
+INFO 2019-12-29 17:36:06,454 [151] cnn_training: Random Epoch: 361[ 71   1 131 142 170]
+INFO 2019-12-29 17:36:15,430 [151] cnn_training: Random Epoch: 362[ 80  49  26 134  38]
+INFO 2019-12-29 17:36:24,091 [151] cnn_training: Random Epoch: 363[ 27 111  14  24  45]
+INFO 2019-12-29 17:36:32,821 [151] cnn_training: Random Epoch: 364[ 26 135 114  57 101]
+INFO 2019-12-29 17:36:41,751 [151] cnn_training: Random Epoch: 365[  5 134 119  61 157]
+INFO 2019-12-29 17:36:50,675 [151] cnn_training: Random Epoch: 366[ 79 196 184  67 132]
+INFO 2019-12-29 17:36:59,607 [151] cnn_training: Random Epoch: 367[103  75 157  15  51]
+INFO 2019-12-29 17:37:08,186 [151] cnn_training: Random Epoch: 368[ 83 181 100 183 177]
+INFO 2019-12-29 17:37:16,892 [151] cnn_training: Random Epoch: 369[ 60  54 117  49  55]
+INFO 2019-12-29 17:37:25,726 [151] cnn_training: Random Epoch: 370[124 185  93  65  20]
+INFO 2019-12-29 17:37:34,573 [151] cnn_training: Random Epoch: 371[ 89  95 135  54 197]
+INFO 2019-12-29 17:37:43,191 [151] cnn_training: Random Epoch: 372[153 149 175 179  78]
+INFO 2019-12-29 17:37:52,048 [151] cnn_training: Random Epoch: 373[ 97 161 116  63  84]
+INFO 2019-12-29 17:38:00,872 [151] cnn_training: Random Epoch: 374[134 120   6  46 107]
+INFO 2019-12-29 17:38:09,631 [151] cnn_training: Random Epoch: 375[ 18  75 113 132 156]
+INFO 2019-12-29 17:38:18,744 [151] cnn_training: Random Epoch: 376[140 129 173  25  18]
+INFO 2019-12-29 17:38:27,833 [151] cnn_training: Random Epoch: 377[ 97 192 110 171   8]
+INFO 2019-12-29 17:38:36,734 [151] cnn_training: Random Epoch: 378[196 192  67 187 149]
+INFO 2019-12-29 17:38:45,481 [151] cnn_training: Random Epoch: 379[169  82  14  35  45]
+INFO 2019-12-29 17:38:54,104 [151] cnn_training: Random Epoch: 380[122 127  82 160  26]
+INFO 2019-12-29 17:39:02,818 [151] cnn_training: Random Epoch: 381[117 107  79 142  39]
+INFO 2019-12-29 17:39:11,712 [151] cnn_training: Random Epoch: 382[160   0 127 142  20]
+INFO 2019-12-29 17:39:20,271 [151] cnn_training: Random Epoch: 383[105  73   0 132  11]
+INFO 2019-12-29 17:39:28,972 [151] cnn_training: Random Epoch: 384[108 157  51 139 196]
+INFO 2019-12-29 17:39:37,738 [151] cnn_training: Random Epoch: 385[ 70 107 119  26 170]
+INFO 2019-12-29 17:39:46,748 [151] cnn_training: Random Epoch: 386[175 136 139  74  34]
+INFO 2019-12-29 17:39:55,685 [151] cnn_training: Random Epoch: 387[ 86 152 197 190 172]
+INFO 2019-12-29 17:40:04,560 [151] cnn_training: Random Epoch: 388[ 72  27  35 179  38]
+INFO 2019-12-29 17:40:13,399 [151] cnn_training: Random Epoch: 389[194 169  91 177 109]
+INFO 2019-12-29 17:40:22,137 [151] cnn_training: Random Epoch: 390[150 179 148  62 157]
+INFO 2019-12-29 17:40:31,257 [151] cnn_training: Random Epoch: 391[122 139  74 105 189]
+INFO 2019-12-29 17:40:40,203 [151] cnn_training: Random Epoch: 392[132 141 127 124 156]
+INFO 2019-12-29 17:40:49,085 [151] cnn_training: Random Epoch: 393[ 40 188  32  93 122]
+INFO 2019-12-29 17:40:57,939 [151] cnn_training: Random Epoch: 394[171 190  22  33 181]
+INFO 2019-12-29 17:41:06,673 [151] cnn_training: Random Epoch: 395[ 68  45 150 144  88]
+INFO 2019-12-29 17:41:15,377 [151] cnn_training: Random Epoch: 396[ 64 167 152  88  86]
+INFO 2019-12-29 17:41:24,743 [151] cnn_training: Random Epoch: 397[115 127  80  26  77]
+INFO 2019-12-29 17:41:33,480 [151] cnn_training: Random Epoch: 398[ 46 161 169  66  59]
+INFO 2019-12-29 17:41:42,411 [151] cnn_training: Random Epoch: 399[77 85 45 23 86]
+INFO 2019-12-29 17:41:51,408 [151] cnn_training: Random Epoch: 400[128 189 168  55  87]
+INFO 2019-12-29 17:41:51,411 [199] cnn_training: Weighted train
+INFO 2019-12-29 17:41:57,324 [223] cnn_training: step 800, testing acc with batch: 0.59090906
+INFO 2019-12-29 17:41:57,584 [229] cnn_training: Best eval value at current epoch: 0.59090906 saved to ../object/lstmfcn_ges/fcn_classification/cnn_model_folder/train_0_atten0_act3_c8_1_p-1_-1_c5_1_p-1_-1_c3_1_p-1_-1_best.ckpt
+INFO 2019-12-29 17:42:01,769 [151] cnn_training: Random Epoch: 401[ 22 158 184  20 125]
+INFO 2019-12-29 17:42:06,613 [235] cnn_training: best eval value at epoch: 401
+INFO 2019-12-29 17:42:06,613 [236] cnn_training: best eval value to break
+INFO 2019-12-29 17:42:06,613 [237] cnn_training: 0.59090906
+INFO 2019-12-29 17:42:06,875 [240] cnn_training: Final model saved to ../object/lstmfcn_ges/fcn_classification/cnn_model_folder/train_0_atten0_act3_c8_1_p-1_-1_c5_1_p-1_-1_c3_1_p-1_-1.ckpt
+INFO 2019-12-29 17:42:08,440 [254] cnn_training: Best session saved to ../object/lstmfcn_ges/fcn_classification/cnn_model_folder/train_0_atten0_act3_c8_1_p-1_-1_c5_1_p-1_-1_c3_1_p-1_-1_best.ckpt
+INFO 2019-12-29 17:42:08,445 [255] cnn_training: Running iteration: 803
+INFO 2019-12-29 17:42:08,445 [256] cnn_training: final best acc with batch: 0.59090906
+INFO 2019-12-29 17:42:08,445 [257] cnn_training: final valid beforeacc with batch: 0.59090906
+INFO 2019-12-29 17:42:09,688 [259] cnn_training: final valid afteracc with batch: 0.5959596
