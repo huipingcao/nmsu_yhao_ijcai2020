@@ -1,8 +1,6 @@
 # nmsu_yhao_ijcai2020
 This is the GitHub repository for our publication "A new attention mechanism to classify multivariate time series", by Yifan Hao and Huiping Cao, which has been accepted to be published in IJCAI 2020. 
 
-This is the code repository for paper 7636 that we submitted to IJCAI 2020. The paper title is "A new attention mechanism to classify multivariate time series".
-
 This paper uses 14 datasets. Each dataset contains two files: train.txt and test.txt.
 
 For the 7 smaller datasets (file size is less than the GitHub limit, 100M), we directly put the processed data of these datasets in the data folder. 
