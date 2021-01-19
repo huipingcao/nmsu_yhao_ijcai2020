@@ -59,5 +59,4 @@ For the 7 larger datasets (whose size is larger than the GitHub limit, 100M), we
         log/ges/fcn_classification/eeg_train_0_fcn_classification_act3_acc_attention0_conv1.log_<TIME_STAMP>.log
     3.4 Similar setting for the cnn with 5 convolutional layers using cnn_model_parameter_conv5.txt
 
-    The testing accuracies in this section are reported in Table 3.
 
