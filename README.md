@@ -6,7 +6,7 @@ This is a TensorFlow 1.15 version. A Tensorflow 2.0 version will be updated and 
 This paper uses 14 datasets. Each dataset contains two files: train.txt and test.txt.
 
 For the 7 smaller datasets (file size is less than the GitHub limit, 100M), we directly put the processed data of these datasets in the data folder. 
-For the 7 larger datasets (whose size is larger than the GitHub limit, 100M), we put the processed data of these datasets at google drive. These files can be downloaded from: https://drive.google.com/open?id=1eMLQIjDCvMIBs_BHDZAmb37MnlywxgyT
+For the 7 larger datasets (whose size is larger than the GitHub limit, 100M), we put the processed data of these datasets at google drive. These files can be downloaded from: https://drive.google.com/open?id=1eMLQIjDCvMIBs_BHDZAmb37MnlywxgyTs
 
 1. Prerequirments:
     The project is writen using Python 2.7. 
